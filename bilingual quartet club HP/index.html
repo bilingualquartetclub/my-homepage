@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilingual Quartet Club</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #fbfbfb;
+      color: #2f2f2f;
+      line-height: 1.8;
+    }
+
+    /* Header */
+    header {
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: linear-gradient(180deg, #eef6f2 0%, #ffffff 100%);
+    }
+    header img { width: 150px; margin-bottom: 20px; }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      color: #1f3d32;
+      margin: 0 0 10px;
+    }
+    header p { font-size: 1.05em; color: #4a6a5c; }
+
+    nav { margin-top: 20px; }
+    nav button {
+      background: transparent;
+      border: 1px solid #1f3d32;
+      color: #1f3d32;
+      padding: 8px 18px;
+      margin: 0 6px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    nav button:hover { background: #1f3d32; color: #fff; }
+
+    /* Hero */
+    .hero img { width: 100%; height: 420px; object-fit: cover; display: block; }
+
+    /* Layout */
+    section { max-width: 1000px; margin: auto; padding: 70px 20px; }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    h2 { font-family: 'Playfair Display', serif; color: #1f3d32; margin-top: 0; }
+    ul { padding-left: 20px; }
+
+    .highlight { background: #eef6f2; border-radius: 16px; }
+
+    footer {
+      background: #1f3d32;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+    }
+
+    a { color: #1f3d32; text-decoration: none; font-weight: 500; }
+
+    .lang { display: none; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2em; }
+      .hero img { height: 260px; }
+      section { padding: 50px 16px; }
+    }
+  </style>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+    }
+  </script>
+</head>
+<body onload="switchLang('jp')">
+
+<header>
+  <img src="./images/logo.png" alt="Bilingual Quartet Club Logo">
+  <h1>Bilingual Quartet Club</h1>
+  <p>Small Ensemble • Big Musical Growth</p>
+  <nav>
+    <button onclick="switchLang('jp')">日本語</button>
+    <button onclick="switchLang('en')">English</button>
+  </nav>
+  <a href="#contact" class="cta-button">体験参加はこちら</a>
+</header>
+
+<div class="hero" style="position: relative;">
+  <img src="./images/hero.png" alt="Children playing string quartet">
+  <div style="position:absolute; inset:0; background: rgba(0,0,0,0.25);"></div>
+  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; text-align:center; padding:20px;">
+    <h2 style="
+      font-family:'Playfair Display', serif;
+      font-size:2.4em;
+      margin-bottom:12px;
+      color: #ffffff;
+      background: rgba(0,0,0,0.25);
+      padding: 10px 20px;
+      border-radius: 12px;
+  ">Music is better together</h2>
+
+
+    <p style="font-size:1.1em; max-width:680px; line-height:1.7;">四重奏に限らず、「誰かと一緒に音楽を奏でること」を大切にしています。<br>
+    一人で黙々と練習するだけなんてもったいない！<br>
+    みんなで音を重ねれば、音楽は100倍楽しい! 
+  </div>
+</div>
+
+<!-- About -->
+<section id="about" class="about-section">
+  <div class="card lang jp">
+    <h2>About Bilingual Quartet Club</h2>
+    <p style="font-size:1.1em;"><strong>Music is better together.</strong><br>
+      四重奏に限らず、「誰かと一緒に音楽を奏でること」を何よりも大切にしています。<br>
+      一人で黙々と練習するだけなんてもったいない。みんなで音を重ねることで、音楽は100倍楽しくなります。
+    </p>
+    <p style="margin-top:20px; color:#444;">
+      アンサンブル活動を通して、<br>
+      <strong>協調性・コミュニケーション力・相手の音を聴く力</strong>が自然と育まれます。<br>
+      音楽を楽しみながら、人と関わる力を身につけられる環境を大切にしています。
+    </p>
+    <p>このクラブは、小学5年生の娘が「イギリスで経験したカルテットを、日本でも続けたい」と話したことをきっかけに始まりました。</p>
+    <p>年齢差のある子ども同士でも、カノンやデュオなどを楽しむことができる経験から、年齢よりも「一緒に音楽を楽しみたい気持ち」を重視しています。</p>
+    <p style="font-size:0.9em; color:#555;">グループ分けは年齢・経験・性格を考慮し、無理のない形で行います。</p>
+  </div>
+
+  <div class="card lang en">
+    <h2>About Bilingual Quartet Club</h2>
+    <p style="font-size:1.1em;"><strong>Music is better together.</strong><br>
+      We value making music with others more than playing alone. Chamber music is not just about quartets — it’s about sharing sound and enjoying together.
+    </p>
+    <p style="margin-top:20px; color:#444;">
+      Through ensemble playing, children naturally develop <strong>collaboration, communication, and listening skills</strong> while having fun.
+    </p>
+    <p>This club started after my fifth-grade daughter expressed her wish to continue playing in a string quartet, an experience she enjoyed while living in the UK.</p>
+    <p>We have seen children of different ages enjoy Pachelbel’s Canon and duets together, which inspired us to value <strong>enthusiasm for playing music together and listening to others</strong> over age differences.</p>
+    <p style="font-size:0.9em; color:#555;">Groups are arranged thoughtfully considering age, experience, and personality to ensure a comfortable experience.</p>
+  </div>
+</section>
+
+<!-- Member Recruitment -->
+<section class="lang jp">
+  <div class="card">
+    <h2>🎻 メンバー募集</h2>
+    <p>少人数で安心してアンサンブルができるクラブです。</p>
+    <ul>
+      <li>英語と日本語を自然に使える環境</li>
+      <li>音楽と一緒にコミュニケーション力も育つ</li>
+    </ul>
+    <p><strong>対象楽器：</strong>ヴァイオリン・ヴィオラ・チェロ ほか</p>
+    <p><strong>対象年齢：</strong>小学校高学年〜中学生中心（応相談）</p>
+    <p><strong>参加条件：</strong>楽器経験のある方</p>
+  </div>
+</section>
+
+<section class="lang en">
+  <div class="card">
+    <h2>Now Recruiting</h2>
+    <p>A welcoming club for small group ensemble music.</p>
+    <ul>
+      <li>Bilingual environment (English & Japanese)</li>
+      <li>Develop musical and communication skills together</li>
+    </ul>
+    <p><strong>Instruments:</strong> Violin, Viola, Cello, and other instruments</p>
+    <p><strong>Age:</strong> Mainly upper elementary to middle school students (other ages welcome upon consultation)</p>
+    <p><strong>Requirements:</strong> Prior instrument experience</p>
+  </div>
+</section>
+
+<!-- Schedule -->
+<section>
+  <div class="card lang jp">
+    <h2>🗓 スケジュール</h2>
+    <p>開催日は現在調整中です。</p>
+    <p><strong>🎧 TONICとは？</strong> 低遅延でアンサンブルができる音楽専用アプリです。<br>▶ <a href="https://tonicmusic.app" target="_blank">TONIC公式サイト</a></p>
+    <p><strong>🏠 対面／オンライン併用可</strong></p>
+  </div>
+  <div class="card lang en">
+    <h2>🗓 Schedule</h2>
+    <p>Dates are currently being arranged.</p>
+    <p><strong>🎧 What is TONIC?</strong> TONIC is a low-latency app for ensemble practice.<br>▶ <a href="https://tonicmusic.app" target="_blank">TONIC official site</a></p>
+    <p><strong>🏠 Both in-person and online sessions available</strong></p>
+  </div>
+</section>
+
+<!-- Fees -->
+<section id="fees" class="lang jp">
+  <div class="card">
+    <h2>💰 参加費</h2>
+    <ul>
+      <li><strong>通常セッション（講師なし）：</strong> 1回 ¥2,500</li>
+      <li><strong>講師参加セッション（月1回）：</strong> 1回 ¥5,000</li>
+    </ul>
+    <p><strong>支払い方法：</strong> 当日現金、事前振込、または PayPay</p>
+    <p style="font-size:0.9em; color:#555;"><strong>🌱 初回は体験参加(無料）です</strong></p>
+  </div>
+</section>
+<section id="fees" class="lang en">
+  <div class="card">
+    <h2>💰 Fees</h2>
+    <ul>
+      <li><strong>Regular Session (no instructor):</strong> ¥2,500 per session</li>
+      <li><strong>Instructor Session (once a month):</strong> ¥5,000 per session</li>
+    </ul>
+    <p><strong>Payment:</strong> Cash, bank transfer, or PayPay</p>
+    <p style="font-size:0.9em; color:#555;"><strong>🌱 First-time participants join as a trial session</strong></p>
+  </div>
+</section>
+
+<!-- Location -->
+<section>
+  <div class="card lang jp">
+    <h2>📍 場所</h2>
+    <p>江東区・豊洲／有明エリア<br>※詳細はお申し込み後にご案内します</p>
+  </div>
+  <div class="card lang en">
+    <h2>📍 Location</h2>
+    <p>Koto-ku, Toyosu / Ariake area<br>* Detailed directions will be provided after registration.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section>
+  <div class="card">
+    <h2>📩 Contact</h2>
+    <p><a href="mailto:bilingualquartetclub@gmail.com">bilingualquartetclub@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>Bilingual Quartet Club ©</p>
+  <p>Let’s explore the world of music together 🎶</p>
+</footer>
+
+</body>
+</html>
